@@ -1,0 +1,43 @@
+﻿@model Community.ViewModels.UserViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+</div>
+
+<h1>Profile</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Username)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Username)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ViewLastLogin)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ViewLastLogin)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.NoOfLogins)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.NoOfLogins)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.NoOfUnreadMsg)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.NoOfUnreadMsg)
+        </dd>
+    </dl>
+
+    <a asp-controller="Messages" asp-action="Index">Inbox</a>
+
+</div>
